@@ -8,7 +8,7 @@ Add-on documentation: <https://developers.home-assistant.io/docs/add-ons>
 
 ## Installation and configuration
 
-Add ([this respository](https://github.com/habuild/hassio-addons)) to Home Assistant via the superviser > new respository menu > add respository
+Add ([this respository](https://github.com/oxyde42/hassio-addons)) to Home Assistant via the superviser > new respository menu > add respository
 
 Fill in the config details to setup Inverter connection, Database, MQTT , and Upload API.
 
@@ -27,12 +27,6 @@ It creates a wrapper to configure the official SBFspot releases.
 
 ### [Detailed Installation](https://github.com/habuild/hassio-addons/blob/main/haos-sbfspot/README.md)
 
-## [SBFspot](./sbfspot)
-
-![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.yaml)
-![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhabuild%2Fhassio-addons%2Fmain%2Fsbfspot%2Fconfig.yaml)
-
-This version is for testing purposes.
 
 ### [Detailed Installation](https://github.com/habuild/hassio-addons/blob/main/sbfspot/README.md)
 
