@@ -6,13 +6,13 @@ description: Manage SBFspot with a simple interface (MQTT 1 per min)
 url: "https://github.com/oxyde42/hassio-addons/tree/main/haos-sbfspot"
 stage: experimental
 
-image: "ghcr.io/habuild/{arch}-addon-haos-sbfspot"
+image: "ghcr.io/oxyde42/{arch}-addon-haos-sbfspot"
 #image: "ghcr.io/oxyde42/aarch64-addon-haos-sbfspot:2024.5.1-1"
 arch:
-  - armhf
-  - armv7
+#  - armhf
+#  - armv7
   - aarch64
-  - amd64
+#  - amd64
 init: false
 host_network: true
 host_dbus: true
