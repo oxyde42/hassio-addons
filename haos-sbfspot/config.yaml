@@ -9,8 +9,8 @@ stage: experimental
 #image: "ghcr.io/habuild/{arch}-addon-haos-sbfspot"
 image: "ghcr.io/oxyde42/aarch64-addon-haos-sbfspot:2024.5.1-1"
 arch:
-#  - armhf
-#  - armv7
+  #  - armhf
+  #  - armv7
   - aarch64
 #  - amd64
 init: false
