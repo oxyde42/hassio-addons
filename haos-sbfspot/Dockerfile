@@ -88,15 +88,9 @@ RUN chmod a+x /etc/services.d/sbfspot/** /usr/bin/sbfspot/**
 # set shell
 RUN echo 'SHELL=/bin/bash' > /etc/crontabs/root
 # update sensors after restart
-RUN echo '@reboot sleep 30 && /usr/bin/sbfspot/SBFspot -v -ad0 -am0 -mqtt -finq > /dev/stdout' >> /etc/crontabs/root
+RUN echo '@reboot sleep 30 && /usr/bin/sbfspot/SBFspot -v -ad0 -am0 -mqtt -nosql -nocsv -sp0 -finq > /dev/stdout' >> /etc/crontabs/root
 # daily data SBFspot
-RUN echo '*/5 6-22 * * *    /usr/bin/sbfspot/SBFspot -v -ad1 -am0 -ae0 -mqtt > /dev/stdout' >> /etc/crontabs/root
-# monthly data SBFspot
-RUN echo '55 05 * * *       /usr/bin/sbfspot/SBFspot -v -sp0 -ad14 -am1 -ae1 -finq > /dev/stdout' >> /etc/crontabs/root
-# start SBFspotUpload 1 min after boot
-RUN echo '@reboot sleep 60 && /usr/bin/sbfspot/SBFspotUploadDaemon -c /usr/bin/sbfspot/SBFspotUpload.cfg > /dev/stdout' >> /etc/crontabs/root
-#  Log SBFspotUpload to HA logging window  defunct now in version 3.9.6+ sbfspot, using it for the timed message
-RUN echo '*/5 6-22 * * * /usr/bin/sbfspot/taillog.sh' >> /etc/crontabs/root
+RUN echo '* 5-22 * * *    /usr/bin/sbfspot/SBFspot -v -ad0 -am0 -ae0 -mqtt -nosql -nocsv -sp0 > /dev/stdout' >> /etc/crontabs/root
 
 # Labels
 LABEL \
@@ -110,10 +104,10 @@ LABEL \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="HAOS-SBFspot" \
     org.label-schema.schema-version="1.0" \
-    org.label-schema.url="https://github.com/habuild/hassio-addons/tree/main/haos-sbfspot" \
-    org.label-schema.usage="https://github.com/habuild/hassio-addons/tree/main/haos-sbfspot/README.md" \
+    org.label-schema.url="https://github.com/oxyde42/hassio-addons/tree/main/haos-sbfspot" \
+    org.label-schema.usage="https://github.com/oxyde42/hassio-addons/tree/main/haos-sbfspot/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
-    org.label-schema.vcs-url="https://github.com/habuild/hassio-addons" \
+    org.label-schema.vcs-url="https://github.com/oxyde42/hassio-addons" \
     org.label-schema.vendor="Hasqt"
 
 
