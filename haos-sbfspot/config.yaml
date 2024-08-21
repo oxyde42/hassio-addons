@@ -1,13 +1,13 @@
 ---
 name: HAOS-SBFspot
-version: 2024.5.1-1
+version: 2024.7.1-1
 slug: haos-sbfspot1m
 description: Manage SBFspot with a simple interface (MQTT 1 per min)
 url: "https://github.com/oxyde42/hassio-addons/tree/main/haos-sbfspot"
 stage: experimental
 
 image: "ghcr.io/oxyde42/{arch}-addon-haos-sbfspot"
-#image: "ghcr.io/oxyde42/aarch64-addon-haos-sbfspot:2024.5.1-1"
+#image: "ghcr.io/oxyde42/aarch64-addon-haos-sbfspot:2024.5.1-1"   # nicht
 arch:
 #  - armhf
 #  - armv7
