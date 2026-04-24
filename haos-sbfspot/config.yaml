@@ -8,10 +8,10 @@ stage: experimental
 
 image: "ghcr.io/habuild/{arch}-addon-haos-sbfspot"
 arch:
-  - armhf
-  - armv7
+#  - armhf
+#  - armv7
   - aarch64
-  - amd64
+#  - amd64
 init: false
 host_network: true
 host_dbus: true
