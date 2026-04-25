@@ -1,6 +1,6 @@
 ---
 name: HAOS-SBFspot
-version: 2025.2.1-2
+version: 2025.2.1-1
 slug: haos-sbfspot
 description: Manage SBFspot with a simple interface (MQTT 1 per min)
 url: "https://github.com/habuild/hassio-addons/tree/main/haos-sbfspot"
